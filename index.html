@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="favicon.png">
+
+  <meta charset="UTF-8">
+  <title>QGIS Onboarding for Google Earth Users</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f8f8f8; }
+    .slide { display: none; padding: 40px; max-width: 800px; margin: auto; background: white; border: 1px solid #ccc; border-radius: 6px; margin-top: 50px; }
+    .slide.active { display: block; }
+    h1, h2 { color: #2c3e50; }
+    .nav-buttons { text-align: center; margin: 30px; }
+    button { padding: 10px 20px; margin: 0 10px; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+<div style="background:#2c3e50; padding:10px; color:white; text-align:center; font-size:18px;">
+  TxDOT GIS - QGIS Onboarding for Google Earth Users
+</div>
+
+
+<h1 style="text-align:center;">QGIS Onboarding for Google Earth Users</h1>
+<div id="slides">
+<div class="slide active" id="slide0"><h2>Welcome to QGIS for Google Earth Users</h2><p>This guide is for Google Earth Pro users who are beginning to use QGIS for mapping, analysis, or GIS projects.<br><br>In this quick tour, you'll learn:<br>- How to match familiar Google Earth workflows in QGIS<br>- How to import, view, and export KML/KMZ<br>- Tips to make QGIS feel like home</p></div>
+<div class="slide" id="slide1"><h2>Familiar Workflows in QGIS</h2><p>- Add Placemarks  Use Point layers in QGIS<br>- Draw Polygons/Paths  Use Polygon and Line layers<br>- Use KML/KMZ  Import via 'Add Vector Layer'<br>- Toggle visibility  Layer Panel checkboxes<br>- Export views  Project > Import/Export > Export to KML</p></div>
+<div class="slide" id="slide2"><h2>Make QGIS Feel Like Google Earth</h2><p>- Install QuickMapServices plugin to access Google Satellite<br>- Enable 'pan/zoom with mouse wheel' in Settings<br>- Customize toolbars to include: Pan, Identify, Measure, Toggle, Export<br>- Use bookmarks to replicate saved views</p></div>
+<div class="slide" id="slide3"><h2>Export to Google Earth from QGIS</h2><p>To share data back with Google Earth:<br>1. Right-click a vector layer > Export > Save Features As...<br>2. Choose 'Keyhole Markup Language (KML)'<br>3. Customize fields and projection (use EPSG:4326)<br><br>Tip: Style layers before export!</p></div>
+<div class="slide" id="slide4"><h2>Recommended Plugins</h2><p>- QuickMapServices  Google/ESRI/OSM basemaps<br>- KML Tools  Enhanced KMZ/KML support<br>- Go2StreetView  Integrates Google Street View<br>- Group Stats  Summary tables like Earth Engine</p></div>
+<div class="slide" id="slide5"><h2>Start with a Sample Project</h2><p>Begin with:<br>- Google Satellite as basemap<br>- Sample KML from your GE projects<br>- Saved bookmarks for key locations<br><br>Use QGIS Project files (.qgz) to save your workspace.</p></div>
+<div class="slide" id="slide6"><h2>Need Help?</h2><p>- QGIS Docs: https://docs.qgis.org<br>- YouTube: 'QGIS for Beginners'<br>- GIS StackExchange: Ask questions<br>- Join local QGIS user groups<br><br>Or contact your GIS administrator for help.</p></div>
+
+</div>
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Previous</button>
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+function showSlide(i) {
+  slides[current].classList.remove('active');
+  current = (i + slides.length) % slides.length;
+  slides[current].classList.add('active');
+}
+function nextSlide() { showSlide(current + 1); }
+function prevSlide() { showSlide(current - 1); }
+</script>
+
+</body>
+</html>
