@@ -4,7 +4,7 @@
 This GitHub Pages site contains a self-guided interactive tutorial to help Google Earth Pro users transition into QGIS.
 
 View it live at:
-`https://your-username.github.io/qgis-onboarding-tutorial/`
+`https://Zachry-Corp-RD.github.io/qgis-onboarding-tutorial/`
 
 ## What’s Included
 - HTML slide-based tutorial
